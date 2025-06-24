@@ -1,0 +1,143 @@
+:root {
+  /* Cores */
+  --cor-primaria: rgb(0, 0, 0);
+  --cor-secundaria: #171717;
+  --cor_borda: rgb(39, 39, 39);
+
+  /* Texto */
+  --texto-branco: #fff;
+
+  /* Proporcões */
+  --header_height: 80px;
+
+  --sidebar_width: 250px;
+}
+
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    color: var(--texto-branco);
+}
+
+html,body{
+  font-family: 'Poppins';
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--header_height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  outline: 1px solid var(--cor_borda);
+  background-color: var(--cor-primaria);
+}
+
+.header_left, .header_right{
+  align-items: center;
+  display: flex;
+  gap:40px;
+  padding: 20px;
+
+  color: var(--texto-branco);
+}
+
+.hero {
+  margin-top: var(--header_height);
+  margin-left: var(--sidebar_width);
+
+  background: url('../src/placeholders/ph_gamebackground.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 20px;
+  height: 100%;
+
+  color: rgb(255, 255, 255); 
+}
+
+
+/*SIDEBAR*/
+
+.sidebar {
+  outline: 1px solid var(--cor_borda);
+
+  color: white;
+
+  width: var(--sidebar_width);
+  height: 100%;
+  
+  background: #000000;
+  padding: 10px;
+
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: fixed;
+}
+
+.sidebar input{
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 10px;
+  border: none;
+
+  background: #171717;
+  
+  color: white;
+  border-radius: 5px;
+
+  outline: none;
+}
+
+.game_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game_item{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0px;
+  border-radius: 2px;
+}
+
+.game_item img {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 4px;
+  margin-right: 10px;
+  
+  object-fit: cover;
+}
+
+.game_item span {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game_item:hover {
+  background: #313131;
+}
