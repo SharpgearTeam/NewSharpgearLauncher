@@ -60,17 +60,18 @@ header{
   margin-top: var(--header_height);
   margin-left: var(--sidebar_width);
 
-  background: url('../src/placeholders/ph_gamebackground.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0)150%),
+                  url('../src/placeholders/splash_survnlive.png');
 
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  
   padding: 20px;
   height: 100%;
 
   color: rgb(255, 255, 255); 
 }
-
 
 /*SIDEBAR*/
 
