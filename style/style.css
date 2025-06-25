@@ -64,13 +64,18 @@ header{
                   url('../src/placeholders/splash_survnlive.png');
 
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
-  
+
   padding: 20px;
   height: 100%;
 
   color: rgb(255, 255, 255); 
+}
+
+.hero img{
+  object-fit: contain;
+  max-width: 300px;
 }
 
 /*SIDEBAR*/
