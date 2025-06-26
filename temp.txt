@@ -1,0 +1,11 @@
+
+        <div class="hero-desc">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi consectetur dicta architecto maiores, adipisci non excepturi modi culpa quaerat maxime reiciendis? Esse distinctio libero rem aperiam commodi dolores cum quibusdam.
+            <p>
+
+            <p>
+                Desenvolvedora: Sharpgear Studios
+                Publisher: Sharpgear Publishing
+            </p>
+        </div>
