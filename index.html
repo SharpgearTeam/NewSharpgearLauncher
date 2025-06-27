@@ -8,19 +8,14 @@
     </head>
 
     <!--HEADER FIXA-->
-    <header class="header">
-        <div class="header_left">
-            <img src="src\Sharpgear Logo.svg" alt="" width="40">
-            <a href="">BIBLIOTECA</a>
-            <a href="">LOJA</a>
-            <a href="">PERFIL </a>
-        </div>
-
-        <div class="header_right">
-            <a href="">PERFIL</a>
-            <img src="src\placeholders\ph_userimage.svg" width="40" style="border-radius: 5px;">
-        </div>
-    </header>
+    <div id="header"></div>
+    <script>
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+    </script>
     
      <!--BARRA LATERAL DA BIBLIOTECA-->
     <aside class="sidebar">
@@ -46,28 +41,33 @@
 
     <!--JOGO SELECIONADO-->
     <section class="hero">
+        
+        <img class="hero-cover" src="src\placeholders\Surv N Live logo - White.png" alt="">
+
         <div class="hero-top">
-            <img src="src\placeholders\Surv N Live logo - White.png" 
-            width="300px">
+            <button>JOGAR</button>
+            <p><b>TEMPO DE JOGO</b><br>200 horas</p>
 
-            <div class="hero-buttons">
-                <button>JOGAR</button>
-
-                <button style="width: 50px;">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 800" width="24px" fill="#000000"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm112-260q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z"/></svg>
-                </button>
+            <p><b>ULTIMA SESSÃO</b><br>20/06 horas</p>
+            
+            <div style="margin-left: auto; display: flex; gap: 4%;">
+                <button style="width: 50px;">⛯</button>
+                <button style="width: 50px;">i</button>
             </div>
+            
         </div>
 
         <div class="hero-desc">
             <p style="max-width: 40%;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores vitae, neque nobis tenetur cupiditate voluptates debitis maxime facilis quaerat! Obcaecati at odit error laudantium accusantium debitis perferendis illum quod!
+                Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
             </p>
 
-            <p style="margin-right: 70px;">
+            <p style="text-align: right;">
                 Desenvolvedora: Sharpgear Studios
                 <br>
                 Publisher: Shargear Publishing
+                <br>
+                <b>PÁGINA NA LOJA</b>
             </p>
         </div>
     </section>

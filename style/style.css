@@ -11,6 +11,8 @@
   --header_height: 80px;
 
   --sidebar_width: 250px;
+
+
 }
 
 *{  
@@ -91,13 +93,22 @@ header{
   color: rgb(255, 255, 255); 
 }
 
-.hero-top{
+.hero-cover{
   display: flex;
 
   justify-content: space-between;
   margin-top: 150px;
-
   margin-left: 2%;  
+}
+
+.hero-top{  
+  display: flex;
+
+  gap: 20px;
+  margin-top: 4%;
+
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .hero-buttons{
@@ -121,7 +132,6 @@ header{
   justify-content: space-between;
   padding: 2%;
   margin-top: 10px;
-
 }
 
 /*SIDEBAR*/

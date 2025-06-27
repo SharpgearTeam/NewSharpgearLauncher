@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharpgear Launcher | Loja </title>
+        
+    </head>
+
+    <div id="header"></div>
+
+    <link rel="stylesheet" href="style\style.css">
+    <script>
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+        
+    </script>
+
+    <link rel="stylesheet" href="style\loja_style.css">
+    <body>
+        <div class="frame-main">
+            <h2>DESTAQUES E RECOMENDADOS</h2>
+
+            <div class="frame-destaque">
+                <img src="src\placeholders\splash_survnlive.png" alt="">
+                
+                <div class="frame-destaque-imgs">
+                    <h2>SURV N LIVE</H2>
+
+                    <!--Imagens-->
+                    <div style="display: flex; gap: 3%; width: 95%;">
+                        <img src="src/placeholders/splash_survnlive.png" alt="">
+                        <img src="src/placeholders/splash_survnlive.png" alt="">
+                    </div>
+
+                    <p style="margin-top: 2%;">
+                        Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
+                    </p>
+                    <div style="display: flex; gap: 2%;">
+                        <h2 style="color: greenyellow;">
+                        R$ 20,99
+                        
+                        </h2>
+                        <h3 style="text-decoration: line-through;">
+                            R$ 30,00
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

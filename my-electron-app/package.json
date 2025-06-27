@@ -10,6 +10,6 @@
   "author": "SharpgearTeam",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^37.0.0"
+    "electron": "^37.1.0"
   }
 }
