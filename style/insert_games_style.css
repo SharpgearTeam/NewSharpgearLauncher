@@ -1,8 +1,23 @@
+:root {
+  /* Cores */
+  --cor-primaria: rgb(0, 0, 0);
+  --cor-secundaria: #171717;
+  --cor_borda: rgb(39, 39, 39);
+
+  /* Texto */
+  --texto-branco: #fff;
+
+  /* Proporcões */
+  --header_height: 80px;
+
+  --sidebar_width: 250px;
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
@@ -14,6 +29,7 @@ body {
 }
 
 .container {
+    margin-top: 100px;
     background: rgb(2, 2, 2);
     padding: 20px;
     border-radius: 8px;

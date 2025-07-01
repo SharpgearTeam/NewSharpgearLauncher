@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inserte games </title>
-    <link rel="stylesheet" href="style\insert_games_style.css"
+    <title>Sharpgear Launcher | Upload Game </title>
+    <link rel="stylesheet" href="style\insert_games_style.css">
 </head>
 <body>
-
+    <!--HEADER FIXA-->
+    <div id="header"></div>
+    <script>
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
     <div class="container">
         <h2>Cadastro de jogos</h2>
         <form action="insert_games.php" method="POST">
