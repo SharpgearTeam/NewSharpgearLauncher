@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="pt-bt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharpgear Launcher | Página loja</title>
+    </head>
+    <body>
+        <!--HEADER FIXA-->
+        <div id="header"></div>
+        <script>
+            fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('header').innerHTML = data;
+            });
+        </script>
+
+        
+    </body>
+</html>
