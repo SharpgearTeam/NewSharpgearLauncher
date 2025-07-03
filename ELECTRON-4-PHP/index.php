@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharpgear Launcher | Biblioteca</title>
+        <link rel="stylesheet" href="style\style.css">
+    </head>
+
+    <!--HEADER FIXA-->
+    <div id="header"></div>
+    <script>
+    fetch('header.php')
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+    </script>
+    
+     <!--BARRA LATERAL DA BIBLIOTECA-->
+    <aside class="sidebar">
+        <input type="text" placeholder="🔍︎">
+
+        <ul class="game_list">
+            <li class="game_item">
+            <img src="src\placeholders\ph_gamelogo.svg">
+            <span>HELL-O WORLD</span>
+            </li>
+
+            <li class="game_item">
+            <img src="src\placeholders\ph_gamelogo.svg">
+            <span>Surv N Live</span>
+            </li>
+            
+            <li class="game_item">
+            <img src="src\placeholders\ph_gamelogo.svg">
+            <span>Darkness Trigger</span>
+            </li>
+        </ul>
+    </aside>
+
+    <!--JOGO SELECIONADO-->
+    <section class="hero">
+        
+        <img class="hero-cover" src="src\placeholders\Surv N Live logo - White.png" alt="">
+
+        <div class="hero-top">
+            <button>JOGAR</button>
+            <p><b>TEMPO DE JOGO</b><br>200 horas</p>
+
+            <p><b>ULTIMA SESSÃO</b><br>20/06</p>
+            
+            <div style="margin-left: auto; display: flex; gap: 4%;">
+                <button style="width: 50px;">⛯</button>
+                <button style="width: 50px;">i</button>
+            </div>
+            
+        </div>
+
+        <div class="hero-desc">
+            <p style="max-width: 40%;">
+                Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
+            </p>
+
+            <p style="text-align: right;">
+                Desenvolvedora: Sharpgear Studios
+                <br>
+                Publisher: Shargear Publishing
+                <br>
+                <b>PÁGINA NA LOJA</b>
+            </p>
+        </div>
+    </section>
+</html>

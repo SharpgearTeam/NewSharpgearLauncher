@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="pt-bt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharpgear Launcher | Página loja</title>
+        <link rel="stylesheet" href="style/loja_pag_style.css">
+    </head>
+    
+    <body>
+        <!--HEADER FIXA-->
+        <div id="header"></div>
+        <script>
+            fetch('header.php')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('header').innerHTML = data;
+            });
+        </script>
+        
+        
+        <div class="frame-main">
+            <div class="frame-left">
+                <h1>SURV N LIVE</h1>
+                <img src="src\placeholders\snl_gameplay.png">
+
+            </div>
+
+            <div class="frame-right">
+                <img src="src/placeholders/Surv N Live logo - White.png" alt="" style="width: 90%; margin-bottom: 5%; margin-top: 5%;">
+
+                <button>COMPRAR R$20</button>
+                <button>+Lista de Desejos</button>
+
+                <p style="font-size: 10px;">
+                    Adquire a licença de uso do jogo: Surv N Live desenvolvido pela: Sharpgear Underground.
+                    A licença de uso é vitalícia, e você jamais vai perder o acesso ao seu jogo.
+                </p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
