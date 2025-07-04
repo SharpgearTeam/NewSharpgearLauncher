@@ -40,7 +40,7 @@ if (!$userTarget) {
     <!--HEADER FIXA-->
     <div id="header"></div>
     <script>
-    fetch('header.html')
+    fetch('header.php')
         .then(res => res.text())
         .then(data => {
         document.getElementById('header').innerHTML = data;
