@@ -20,7 +20,7 @@
 }
 
 body{
-    background-color: #000000ea;
+    background-color: #000000f0;
     margin-top: var(--header_height);
     align-items: center;
 }
@@ -42,13 +42,13 @@ body{
 .frame-left{
     max-width: 65%;
     padding: 2%;
-
+    justify-items: center;
 }
 
 .frame-right{
     display: flex;
     flex-direction: column;
-    gap: 2%;
+    gap: 1%;
 
     margin-right: 2%;
 }
