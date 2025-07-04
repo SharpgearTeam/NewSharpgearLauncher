@@ -8,47 +8,94 @@
     </head>
 
     <div id="header"></div>
+        <link rel="stylesheet" href="style\style.css">
+        <script>
+            fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('header').innerHTML = data;
+            });
+            
+        </script>
 
-    <link rel="stylesheet" href="style\style.css">
-    <script>
-        fetch('header.html')
-        .then(res => res.text())
-        .then(data => {
-        document.getElementById('header').innerHTML = data;
-        });
-        
-    </script>
 
     <body>
         <div class="frame-main">
             <h2>DESTAQUES E RECOMENDADOS</h2>
 
-            <div class="frame-destaque">
-                <img src="src\placeholders\splash_survnlive.png" alt="">
-                
-                <div class="frame-destaque-imgs">
-                    <h2>SURV N LIVE</H2>
-
-                    <!--Imagens-->
-                    <div style="display: flex; gap: 3%; width: 95%;">
-                        <img src="src/placeholders/splash_survnlive.png" alt="">
-                        <img src="src/placeholders/splash_survnlive.png" alt="">
+            <!--Jogo em Destaque-->
+            <div class="main-destaque" >
+                <img src="src/placeholders/splash_survnlive.png" alt="gamesplashart">
+                <div class="destaque-desc">
+                    <h1>SURV N  LIVE</h1>
+                    <div class="destaque-desc-images">
+                        <img src="src/placeholders/snl_gameplay.png" alt="">
+                        <img src="src/placeholders/snl_gameplay.png" alt="">
                     </div>
-
-                    <p style="margin-top: 2%;">
-                        Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi voluptas fuga repudiandae fugiat perferendis totam veniam itaque ex nemo odio ducimus delectus
                     </p>
-                    <div style="display: flex; gap: 2%;">
-                        <h2 style="color: greenyellow;">
-                        R$ 20,99
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 4%;">
+                        <div style="display: flex;">
+                            <h1 style="color: greenyellow;">
+                                R$20,99
+                            </h1>
+                            <s>R$30,00</s>
+
+                        </div>
                         
-                        </h2>
-                        <h3 style="text-decoration: line-through;">
-                            R$ 30,00
-                        </h3>
+                        <button>
+                            COMPRAR
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Jogos-->
+            <div style="display: flex; gap: 2%;">
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
+                    </div>
+                </div>
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </body>
-</html>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(r => r.text())
+        .then(html => {
+        document.getElementById('footer').innerHTML = html;
+        });
+    </script>
+
+</html> 
