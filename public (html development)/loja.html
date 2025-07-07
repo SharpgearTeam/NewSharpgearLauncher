@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sharpgear Launcher | Loja </title>
+        <link rel="stylesheet" href="style\loja_style.css">
+    </head>
+
+    <div id="header"></div>
+        <link rel="stylesheet" href="style\style.css">
+        <script>
+            fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('header').innerHTML = data;
+            });
+            
+        </script>
+
+
+    <body>
+        <div class="frame-main">
+            <h2>DESTAQUES E RECOMENDADOS</h2>
+
+            <!--Jogo em Destaque-->
+            <div class="main-destaque" >
+                <img src="src/placeholders/splash_survnlive.png" alt="gamesplashart">
+                <div class="destaque-desc">
+                    <h1>SURV N  LIVE</h1>
+                    <div class="destaque-desc-images">
+                        <img src="src/placeholders/snl_gameplay.png" alt="">
+                        <img src="src/placeholders/snl_gameplay.png" alt="">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi voluptas fuga repudiandae fugiat perferendis totam veniam itaque ex nemo odio ducimus delectus
+                    </p>
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 4%;">
+                        <div style="display: flex;">
+                            <h1 style="color: greenyellow;">
+                                R$20,99
+                            </h1>
+                            <s>R$30,00</s>
+
+                        </div>
+                        
+                        <button>
+                            COMPRAR
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Jogos-->
+            <div style="display: flex; gap: 2%;">
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
+                    </div>
+                </div>
+                <div class="game-frame">
+                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+                    <div style="display: flex; justify-content: space-between;">
+                        <b>HELL-O WORLD</b>
+
+                        <a href="" style="color: greenyellow;">
+                            <b>GRATUITO</b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(r => r.text())
+        .then(html => {
+        document.getElementById('footer').innerHTML = html;
+        });
+    </script>
+
+</html> 
