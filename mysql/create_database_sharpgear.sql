@@ -1,0 +1,1 @@
+CREATE database sharpgearlauncher_db
