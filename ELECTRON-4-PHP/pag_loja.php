@@ -26,7 +26,7 @@
                 </h1>
                 <img src="src\placeholders\snl_gameplay.png">
 
-                <div style="display: flex; width: 20%; gap: 8%; justify-content: center;">
+                <div style="display: flex; width: 20%; gap: 8%; justify-content: center; margin-left: 40%">
                     <img src="src\placeholders\snl_gameplay.png" alt="">
                     <img src="src\placeholders\snl_gameplay.png" alt="">
                     <img src="src\placeholders\snl_gameplay.png" alt="">
