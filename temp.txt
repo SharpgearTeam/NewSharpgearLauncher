@@ -1,0 +1,35 @@
+
+<!--Jogos-->
+<div style="display: flex; gap: 2%;">
+    <div class="game-frame">
+        <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+        <div style="display: flex; justify-content: space-between;">
+            <b>HELL-O WORLD</b>
+
+            <a href="" style="color: greenyellow;">
+                <b>GRATUITO</b>
+            </a>
+        </div>
+    </div>
+
+    <div class="game-frame">
+        <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+        <div style="display: flex; justify-content: space-between;">
+            <b>HELL-O WORLD</b>
+
+            <a href="" style="color: greenyellow;">
+                <b>GRATUITO</b>
+            </a>
+        </div>
+    </div>
+    <div class="game-frame">
+        <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
+        <div style="display: flex; justify-content: space-between;">
+            <b>HELL-O WORLD</b>
+
+            <a href="" style="color: greenyellow;">
+                <b>GRATUITO</b>
+            </a>
+        </div>
+    </div>
+</div>

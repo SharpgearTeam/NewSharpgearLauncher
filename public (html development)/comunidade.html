@@ -7,11 +7,20 @@
     </head>
 
     <body>
-        <header>
+        <div id="header"></div>
+        <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById('header').innerHTML = data;
+            });
+        </script>
 
-        </header>
+        <div>
+            <img src="" alt="">
+        </div>
         
-        
+
 
     </body>
 </html>
