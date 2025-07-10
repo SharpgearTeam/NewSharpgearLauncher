@@ -3,7 +3,9 @@ require_once "auths/getUserInfo.php";
 $user = getUser();
 
 $avatarUrl = null;
+$loggedIn = false;
 if ($user !== null) {
+    $loggedIn = true;
     $avatarUrl = $user['avatar_url'];
 } else {
     $avatarUrl = "src\placeholders\ph_userimage.svg";
@@ -22,7 +24,7 @@ if ($user !== null) {
     <div class="header_right">
         <a href="insert_games.php">ADMIN</a>
         <a href="perfil_page.php">PERFIL</a>
-        <a href="cadastro.php">
+        <a href="<?= $loggedIn ? 'perfil_page.php' : 'cadastro.php' ?>">
             <img src="<?= htmlspecialchars($avatarUrl)?>" width="40" style="border-radius: 5px;">
         </a>
     </div>
