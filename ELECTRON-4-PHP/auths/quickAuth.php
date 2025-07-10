@@ -5,7 +5,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     
-    header("Location: index.html");
+    header("Location: ../index.html");
     exit;
 }
 ?>
