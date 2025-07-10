@@ -1,3 +1,15 @@
+<?php
+require_once "auths/getUserInfo.php";
+$user = getUser();
+
+$avatarUrl = null;
+if ($user !== null) {
+    $avatarUrl = $user['avatar_url'];
+} else {
+    $avatarUrl = "src\placeholders\ph_userimage.svg";
+}
+
+?>
 <header class="header">
     <link rel="stylesheet" href="style\style.css">
     <div class="header_left">
@@ -10,7 +22,9 @@
     <div class="header_right">
         <a href="insert_games.php">ADMIN</a>
         <a href="perfil_page.php">PERFIL</a>
-        <img src="src\placeholders\ph_userimage.svg" width="40" style="border-radius: 5px;">
+        <a href="cadastro.php">
+            <img src="<?= htmlspecialchars($avatarUrl)?>" width="40" style="border-radius: 5px;">
+        </a>
     </div>
 </header>
 

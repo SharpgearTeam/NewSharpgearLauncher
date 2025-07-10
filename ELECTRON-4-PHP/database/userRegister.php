@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "ELECTRON-4-PHP\conexao_bd.php";
+require_once "conexao_bd.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     try {  
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         // Retorno de sucesso
         echo  "cliente cadastrado com sucesso!";
-        header("Location: ../../cadastro.php");
+        header("Location: ../cadastro.php");
         exit;
     } catch (PDOException $e) {
         // Captura erro do banco e retorna JSON
