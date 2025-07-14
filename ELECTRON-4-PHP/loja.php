@@ -88,7 +88,7 @@
         </div>
     </body>
 
-    <div id="footer"></div>
+    <div style="margin-top: 400px" id="footer"></div>
     <script>
         fetch('footer.php')
         .then(r => r.text())
