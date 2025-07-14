@@ -15,8 +15,7 @@
             .then(data => {
             document.getElementById('header').innerHTML = data;
             });
-            
-        </script>
+    </script>
 
 
     <body>
@@ -88,7 +87,7 @@
         </div>
     </body>
 
-    <div style="margin-top: 400px" id="footer"></div>
+    <div id="footer"></div>
     <script>
         fetch('footer.php')
         .then(r => r.text())

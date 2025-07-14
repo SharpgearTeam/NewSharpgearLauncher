@@ -12,12 +12,18 @@ if ($user !== null) {
 }
 
 ?>
+
+<link rel="stylesheet" href="style\style.css">
 <header class="header">
-    <link rel="stylesheet" href="style\style.css">
     <div class="header_left">
         <img src="src\Sharpgear Logo.svg" alt="" width="40">
-        <a href="index.php">BIBLIOTECA</a>
-        <a href="loja.php">LOJA</a>
+
+        <?php if ($user != null):?>
+            <a href="index.php">BIBLIOTECA</a>
+            <a href="loja.php">LOJA</a>
+        <?php endif;?>
+
+
     </div>
 
     <div class="header_right">

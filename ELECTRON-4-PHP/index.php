@@ -1,10 +1,15 @@
 <?php
-require_once 'auths/getUserInfo.php';
-$user = getUser();
+    require_once 'auths/getUserInfo.php';
+    $user = getUser();
+
+    if($user == null){
+        header("Location: cadastro.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
-    <html lang="pt-br">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +20,7 @@ $user = getUser();
     <!--HEADER FIXA-->
     <div id="header"></div>
     <script>
-    fetch('header.php')
+        fetch('header.php')
         .then(res => res.text())
         .then(data => {
         document.getElementById('header').innerHTML = data;

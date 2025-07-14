@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style/cadastro.css">
+	<link rel="stylesheet" href="./style/cadastro.css">
 	
 </head>
 <body>
-    
+
+<!--HEADER-->
+<div id="header"></div>
+<script>
+	fetch('header.php')
+	.then(res => res.text())
+	.then(data => {
+	document.getElementById('header').innerHTML = data;
+	});
+</script>
+
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="database\userRegister.php" method="POST"">
