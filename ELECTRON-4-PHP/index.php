@@ -1,3 +1,8 @@
+<?php
+require_once 'auths/getUserInfo.php';
+$user = getUser();
+?>
+
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>

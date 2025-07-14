@@ -21,8 +21,9 @@ if ($user !== null) {
     </div>
 
     <div class="header_right">
-        <a href="insert_games.php">ADMIN</a>
-        <a href="perfil_page.php">PERFIL</a>
+        <a href="<?= $loggedIn ? 'perfil_page.php' : 'cadastro.php' ?>">
+            <?= $loggedIn ? strtoupper($user['username']) : 'LOGIN'?>
+        </a>
         <a href="<?= $loggedIn ? 'perfil_page.php' : 'cadastro.php' ?>">
             <img src="<?= htmlspecialchars($avatarUrl)?>" width="40" style="border-radius: 5px;">
         </a>

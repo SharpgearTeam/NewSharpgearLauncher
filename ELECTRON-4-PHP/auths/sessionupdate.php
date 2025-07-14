@@ -11,5 +11,6 @@ $_SESSION['username'] = $newUser['username'];
 $_SESSION['description'] = $newUser['description'];
 $_SESSION['avatar_url'] = $newUser['avatar_url'];
 $_SESSION['isAdmin'] = $newUser['role'] === 'admin';
+$_SESSION['role'] = $newUser['role'];
 
 ?>
