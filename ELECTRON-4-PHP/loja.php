@@ -21,7 +21,7 @@
 
     <body>
         <div class="frame-main">
-            <h2>DESTAQUES E RECOMENDADOS</h2>
+            <h1>ORIGINAIS SHARPGEAR</h1>
 
             <!--Jogo em Destaque-->
             <div class="main-destaque" >
@@ -33,7 +33,7 @@
                         <img src="src/placeholders/snl_gameplay.png" alt="">
                     </div>
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi voluptas fuga repudiandae fugiat perferendis totam veniam itaque ex nemo odio ducimus delectus
+                        Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
                     </p>
                     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 4%;">
                         <div style="display: flex;">
@@ -44,50 +44,48 @@
 
                         </div>
                         
-                        <button>
-                            COMPRAR
-                        </button>
+                        <a href="pag_loja_snlv.php">
+                            <button>
+                                COMPRAR
+                            </button>
+                        </a>
+
                         
                     </div>
                 </div>
             </div>
 
-            <!--Jogos-->
-            <div style="display: flex; gap: 2%;">
-                <div class="game-frame">
-                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
-                    <div style="display: flex; justify-content: space-between;">
-                        <b>HELL-O WORLD</b>
-
-                        <a href="" style="color: greenyellow;">
-                            <b>GRATUITO</b>
+            <div class="main-destaque" >
+                
+                <div class="destaque-desc">
+                    <h1>HELL-O WORLD</h1>
+                    <div class="destaque-desc-images">
+                        <img src="src\h0w screenshots\h0w_print_2.png" alt="">
+                        <img src="src\h0w screenshots\h0w_print_3.png" alt="">
+                    </div>
+                    <p>
+                        HELL-O WORLD é um jogo PvP para 2-4 jogadores que utiliza o sistema de Rollback Beta do GMS2. Convide seus amigos (se você tiver algum) para destruí-los nesse jogo de tiro competitivo Top-Down. -Criado por AdriN.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 4%;">
+                        <div style="display: flex;">
+                            <h1 style="color: greenyellow;">
+                                GRATUITO
+                            </h1>
+                        </div>
+                        
+                        <a href="pag_loja_h0w.php">
+                            <button>
+                                COMPRAR
+                            </button>
                         </a>
+                        
                     </div>
                 </div>
-
-                <div class="game-frame">
-                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
-                    <div style="display: flex; justify-content: space-between;">
-                        <b>HELL-O WORLD</b>
-
-                        <a href="" style="color: greenyellow;">
-                            <b>GRATUITO</b>
-                        </a>
-                    </div>
-                </div>
-                <div class="game-frame">
-                    <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="">
-                    <div style="display: flex; justify-content: space-between;">
-                        <b>HELL-O WORLD</b>
-
-                        <a href="" style="color: greenyellow;">
-                            <b>GRATUITO</b>
-                        </a>
-                    </div>
-                </div>
+                <img src="src\placeholders\HELL-O WORLD GAME COVER.png" alt="gamesplashart">
             </div>
+
+           
         </div>
-            
     </body>
 
     <div id="footer"></div>

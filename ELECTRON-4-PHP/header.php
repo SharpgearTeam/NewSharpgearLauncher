@@ -4,7 +4,7 @@ $user = getUser();
 
 $avatarUrl = null;
 if ($user !== null) {
-    $avatarUrl = $user['avatar_url'];
+    $avatarUrl = "http://localhost:8080" . $user['avatar_url'];
 } else {
     $avatarUrl = "src\placeholders\ph_userimage.svg";
 }
@@ -16,7 +16,6 @@ if ($user !== null) {
         <img src="src\Sharpgear Logo.svg" alt="" width="40">
         <a href="index.php">BIBLIOTECA</a>
         <a href="loja.php">LOJA</a>
-        <a href="pag_loja.php">PAGLOJA</a>
     </div>
 
     <div class="header_right">

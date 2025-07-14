@@ -1,3 +1,7 @@
+
+<html>
+
+
 <link rel="stylesheet" href="style\style.css">
 <footer class="footer">
 
@@ -5,7 +9,7 @@
 
     <img style="width: 15%; margin-bottom: 2%;" src="src\Gearpunk.png" alt="">
 
-    <div style="display: flex; gap: 20px ; justify-self: center;  margin-bottom: 2%;">
+    <div style="display: flex; gap: 20px ; justify-self: center;  margin-bottom: 2%; justify-content: center;">
         <a href="index.php">BIBLIOTECA</a>
         <p>|</p>
         <a href="loja.php">LOJA</a>
@@ -19,3 +23,5 @@
         2025 Sharpgear Studios • Todos os Direitos Reservados | Design por Adrian Barbosa
     </p>
 </footer>
+
+</html>

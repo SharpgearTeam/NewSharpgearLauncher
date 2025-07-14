@@ -33,7 +33,7 @@ body{
     background-color: #000000;
     margin-left: var(--margem-loja);
     margin-right: var(--margem-loja);
-    height: 100%;
+    height: auto;
     padding: 2%;
 
     display: flex;
@@ -58,11 +58,10 @@ body{
     background-color: #171717; width: 100%;
     padding: 1%;
     min-width: 100px;
- 
+    justify-content: center;
 }
 .destaque-desc-images{
     justify-self: center;
-    justify-content: center;
     display: flex;
     width: 90%;
     gap: 2%;

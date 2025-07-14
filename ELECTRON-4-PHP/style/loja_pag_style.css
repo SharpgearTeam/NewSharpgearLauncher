@@ -40,16 +40,16 @@ body{
 }
 
 .frame-left{
+    display: flex;
+    flex-direction: column;
     max-width: 65%;
     padding: 2%;
-    justify-items: center;
 }
 
 .frame-right{
     display: flex;
     flex-direction: column;
     gap: 1%;
-
     margin-right: 2%;
 }
 .frame-right button{
