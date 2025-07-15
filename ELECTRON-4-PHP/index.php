@@ -6,6 +6,35 @@
         header("Location: cadastro.php");
         exit;
     }
+
+    $conn = new mysqli("localhost", "root", "", "sharpgear_users");
+
+    if ($conn->connect_error) {
+        die("Falha na conexão: " . $conn->connect_error);
+    }
+
+    // ID do usuário (pode vir da sessão)
+    $user_id = $user["id"];
+
+    // prepara a query
+    $sql = "SELECT g.nome, g.logo, g.descr
+            FROM user_library ul
+            JOIN games g ON g.id = ul.game_id
+            WHERE ul.user_id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // pega todos os jogos em um array
+    $jogos = [];
+    while ($row = $result->fetch_assoc()) {
+        $jogos[] = $row;
+    }
+
+    $stmt->close();
+    $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -32,22 +61,44 @@
         <input type="text" placeholder="🔍︎">
 
         <ul class="game_list">
-            <li class="game_item">
-            <img src="src\placeholders\ph_gamelogo.svg">
-            <span>HELL-O WORLD</span>
-            </li>
-
-            <li class="game_item">
-            <img src="src\placeholders\ph_gamelogo.svg">
-            <span>Surv N Live</span>
-            </li>
-            
-            <li class="game_item">
-            <img src="src\placeholders\ph_gamelogo.svg">
-            <span>Darkness Trigger</span>
-            </li>
+            <?php foreach ($jogos as $jogo): ?>
+                <li class="game_item"
+                    data-id="<?= htmlspecialchars($jogo['id']) ?>"
+                    data-nome="<?= htmlspecialchars($jogo['nome']) ?>"
+                    data-logo="<?= htmlspecialchars($jogo['logo']) ?>"
+                    data-descr="<?= htmlspecialchars($jogo['descr']) ?>"
+                >
+                    <img src="<?= htmlspecialchars($jogo['logo']) ?>">
+                    <span><?= htmlspecialchars($jogo['nome']) ?></span>
+                </li>
+            <?php endforeach; ?>
         </ul>
+
+        <div id="result">nenhum</div>
+        
+        <script>
+            const gameItems = document.querySelectorAll('.game_item');
+
+            gameItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const nome = item.getAttribute('data-nome');
+                const logo = item.getAttribute('data-logo');
+                const desc = item.getAttribute('data-descr');
+
+                //ALTERAR AS INFORMAÇÕES DE ACORDO COM O JOGO SELECIONADO.
+                document.querySelector('#result').textContent = ' jogo selecionado: ' + nome;
+                document.querySelector('#result').textContent = ' jogo selecionado: ' + nome;
+                document.querySelector('#desc').textContent = ''+desc;
+            });
+            });
+
+            document.querySelector('#btn').addEventListener('click', () => {
+                document.querySelector('#result').textContent = 'clicado.';
+            });
+        </script>
+
     </aside>
+
 
     <!--JOGO SELECIONADO-->
     <section class="hero">
@@ -68,7 +119,7 @@
         </div>
 
         <div class="hero-desc">
-            <p style="max-width: 40%;">
+            <p style="max-width: 40%;" id="desc">
                 Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
             </p>
 
@@ -82,3 +133,4 @@
         </div>
     </section>
 </html>
+

@@ -1,3 +1,20 @@
+<?php
+    require_once 'auths/getUserInfo.php';
+
+    $conn = new mysqli("localhost", "root", "", "sharpgear_users");
+
+    if ($conn->connect_error) {
+        die("Falha na conexão: " . $conn->connect_error);
+    }
+
+    $user = getUser();
+
+    if($user == null){
+        header("Location: cadastro.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
     <html lang="pt-bt">
     <head>
@@ -41,8 +58,45 @@
             <div class="frame-right">
                 <img src="src/placeholders/Surv N Live logo - White.png" alt="" style="width: 90%; margin-bottom: 5%; margin-top: 5%;">
 
-                <button>COMPRAR R$20</button>
-                <button>+Lista de Desejos</button>
+                <form method="POST" action="" style="width: 350px; height: 50px;">
+                    <input type="hidden" name="game_id" value="<?= $game['id'] ?>">
+                    <button style=" width: 350px; height: 50px;" type="submit" name="add">ADQUIRIR R$20,00</button>
+                </form>
+
+                <?php
+                    if (isset($_POST['add']) && isset($_POST['game_id'])) {
+                        //$game_id = (int)$_POST['game_id'];
+                        $game_id = 2;
+
+                        // primeiro: verificar se já existe
+                        $sql_check = "SELECT 1 FROM user_library WHERE user_id = ? AND game_id = ?";
+                        $stmt_check = $conn->prepare($sql_check);
+                        $stmt_check->bind_param("ii", $user["id"], $game_id);
+                        $stmt_check->execute();
+                        $stmt_check->store_result();
+                    
+                        
+                        if ($stmt_check->num_rows > 0) {
+                            // já tem
+                            echo "<p style='color: orange'>Esse jogo já está na sua biblioteca.</p>";
+                        } else {
+                            // não tem ainda — insere
+                            $sql_insert = "INSERT INTO user_library (user_id, game_id) VALUES (?, ?)";
+                            $stmt_insert = $conn->prepare($sql_insert);
+                            $stmt_insert->bind_param("ii", $user["id"], $game_id);
+
+                            if ($stmt_insert->execute()) {
+                                echo "<p style='color: green'>Jogo adicionado à biblioteca!</p>";
+                            } else {
+                                echo "<p style='color: red'>Erro ao adicionar: {$stmt_insert->error}</p>";
+                            }
+
+                            $stmt_insert->close();
+                        }
+
+                        $stmt_check->close();
+                    }
+                ?>
 
                 <p style="font-size: 10px;">
                     Adquire a licença de uso do jogo: Surv N Live desenvolvido pela: Sharpgear Underground.
