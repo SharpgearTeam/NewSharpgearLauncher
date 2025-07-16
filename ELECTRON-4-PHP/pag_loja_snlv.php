@@ -66,7 +66,7 @@
                 <?php
                     if (isset($_POST['add']) && isset($_POST['game_id'])) {
                         //$game_id = (int)$_POST['game_id'];
-                        $game_id = 2;
+                        $game_id = 1;
 
                         // primeiro: verificar se já existe
                         $sql_check = "SELECT 1 FROM user_library WHERE user_id = ? AND game_id = ?";

@@ -17,7 +17,7 @@
     $user_id = $user["id"];
 
     // prepara a query
-    $sql = "SELECT g.nome, g.logo, g.descr
+    $sql = "SELECT g.nome, g.logo, g.cover, g.descr
             FROM user_library ul
             JOIN games g ON g.id = ul.game_id
             WHERE ul.user_id = ?";
@@ -66,6 +66,7 @@
                     data-id="<?= htmlspecialchars($jogo['id']) ?>"
                     data-nome="<?= htmlspecialchars($jogo['nome']) ?>"
                     data-logo="<?= htmlspecialchars($jogo['logo']) ?>"
+                    data-cover="<?= htmlspecialchars($jogo['cover']) ?>"
                     data-descr="<?= htmlspecialchars($jogo['descr']) ?>"
                 >
                     <img src="<?= htmlspecialchars($jogo['logo']) ?>">
@@ -74,7 +75,7 @@
             <?php endforeach; ?>
         </ul>
 
-        <div id="result">nenhum</div>
+        
         
         <script>
             const gameItems = document.querySelectorAll('.game_item');
@@ -84,11 +85,20 @@
                 const nome = item.getAttribute('data-nome');
                 const logo = item.getAttribute('data-logo');
                 const desc = item.getAttribute('data-descr');
+                const cover = item.getAttribute('data-cover');
 
                 //ALTERAR AS INFORMAÇÕES DE ACORDO COM O JOGO SELECIONADO.
-                document.querySelector('#result').textContent = ' jogo selecionado: ' + nome;
-                document.querySelector('#result').textContent = ' jogo selecionado: ' + nome;
-                document.querySelector('#desc').textContent = ''+desc;
+                document.querySelector('#game_img').src = logo;
+                document.querySelector('#game_desc').textContent = desc;
+
+                
+                const hero = document.querySelector('.hero');
+
+                hero.style.backgroundImage = `
+                linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 150%),
+                url('${cover}')
+                `;
+                
             });
             });
 
@@ -103,7 +113,7 @@
     <!--JOGO SELECIONADO-->
     <section class="hero">
         
-        <img class="hero-cover" src="src\placeholders\Surv N Live logo - White.png" alt="">
+        <img id="game_img" class="hero-cover" src="src\placeholders\Surv N Live logo - White.png" alt="">
 
         <div class="hero-top">
             <button>JOGAR</button>
@@ -119,7 +129,7 @@
         </div>
 
         <div class="hero-desc">
-            <p style="max-width: 40%;" id="desc">
+            <p id="game_desc" style="max-width: 40%;">
                 Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
             </p>
 
