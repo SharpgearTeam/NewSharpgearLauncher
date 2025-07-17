@@ -61,6 +61,7 @@ app.on('ready', () => {
 
 // PHP SERVER CREATION /////
 const PHPServer = require('php-server-manager');
+const { exec, execFile } = require('child_process')
 
 let server
   if (process.platform === 'win32') {

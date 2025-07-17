@@ -75,13 +75,12 @@
             <?php endforeach; ?>
         </ul>
 
-        
-        
         <script>
             const gameItems = document.querySelectorAll('.game_item');
 
             gameItems.forEach(item => {
             item.addEventListener('click', () => {
+                const iid = item.getAttribute('data-id')
                 const nome = item.getAttribute('data-nome');
                 const logo = item.getAttribute('data-logo');
                 const desc = item.getAttribute('data-descr');
@@ -90,14 +89,21 @@
                 //ALTERAR AS INFORMAÇÕES DE ACORDO COM O JOGO SELECIONADO.
                 document.querySelector('#game_img').src = logo;
                 document.querySelector('#game_desc').textContent = desc;
+                document.querySelector('#ahero').style.visibility = 'visible';
 
-                
                 const hero = document.querySelector('.hero');
 
                 hero.style.backgroundImage = `
                 linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 150%),
                 url('${cover}')
                 `;
+
+                if (nome == 'HELL-O WORLD'){
+                    document.querySelector('#btn_hw').addEventListener("click", run_hw);
+                    
+                }else {
+                    document.querySelector('#btn_hw').addEventListener("click", run_snlv);
+                }
                 
             });
             });
@@ -105,21 +111,36 @@
             document.querySelector('#btn').addEventListener('click', () => {
                 document.querySelector('#result').textContent = 'clicado.';
             });
+            
         </script>
 
     </aside>
 
 
     <!--JOGO SELECIONADO-->
-    <section class="hero">
+    <section id="ahero" class="hero">
         
-        <img id="game_img" class="hero-cover" src="src\placeholders\Surv N Live logo - White.png" alt="">
+        <img id="game_img" class="hero-cover" src="" alt="">
 
-        <div class="hero-top">
-            <button>JOGAR</button>
-            <p><b>TEMPO DE JOGO</b><br>200 horas</p>
+        <div class="hero-top" >
+            
+            <button id="btn_hw" onclick="">JOGAR</button>
+            
+            <script>
+                function run_snlv() {
+                   // window.open("games/projectsurvnlive/index.html");
+                    window.location.href = "games/projectsurvnlive/index.html";
+                }
 
-            <p><b>ULTIMA SESSÃO</b><br>20/06</p>
+                function run_hw(){
+                    window.location.href = "games/HELL-O WORLD 2/index.html";
+                }
+                
+            </script>
+            
+            <p><b>TEMPO DE JOGO</b><br>~~ horas</p>
+
+            <p><b>ULTIMA SESSÃO</b><br>16/07</p>
             
             <div style="margin-left: auto; display: flex; gap: 4%;">
                 <button style="width: 50px;">⛯</button>
@@ -130,7 +151,7 @@
 
         <div class="hero-desc">
             <p id="game_desc" style="max-width: 40%;">
-                Surv N' Live é um jogo indie top down no qual você assume o papel de três jovens de um grupo de hackers que foram “convidados” de maneira curta e gentil a participar de uma série de desafios que valem sua liberdade... ou até mesmo sua vida.
+                
             </p>
 
             <p style="text-align: right;">

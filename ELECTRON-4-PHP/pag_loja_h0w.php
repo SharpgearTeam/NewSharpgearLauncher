@@ -78,7 +78,8 @@
                         
                         if ($stmt_check->num_rows > 0) {
                             // já tem
-                            echo "<p style='color: orange'>Esse jogo já está na sua biblioteca.</p>";
+                            
+                            echo "<p style='color: orange'>Esse jogo já está na sua <a href='index.php'>biblioteca</a>.</p>";
                         } else {
                             // não tem ainda — insere
                             $sql_insert = "INSERT INTO user_library (user_id, game_id) VALUES (?, ?)";

@@ -44,6 +44,7 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #131313;
 }
 
 header{
@@ -77,7 +78,7 @@ header{
   margin-left: var(--sidebar_width);
 
   background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0)150%),
-                  url('../src/placeholders/splash_survnlive.png');
+                  url('../src/placeholders/ph_gamebackground.png');
 
   background-size: cover;
   background-position: center;
@@ -88,7 +89,8 @@ header{
   width: auto;
   height: 100%;
   
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
+  visibility: hidden;
 }
 
 .hero-cover{
@@ -96,7 +98,8 @@ header{
 
   justify-content: space-between;
   margin-top: 150px;
-  margin-left: 2%;  
+  margin-left: 2%; 
+  max-height: 200px;
 }
 
 .hero-top{  
