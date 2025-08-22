@@ -1,4 +1,8 @@
 <?php
+    include 'php_functions\create_database_n_tables.php';   // continua mesmo se der erro
+    require 'php_functions\create_database_n_tables.php';   // quebra se der erro
+
+
     require_once 'auths/getUserInfo.php';
     $user = getUser();
 
